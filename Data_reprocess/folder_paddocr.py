@@ -28,7 +28,7 @@ class PaddleOCR(object):
 
     @staticmethod
     def write(image_path, data, output_file):
-        with open(output_file, 'w') as f:
+        with open(output_file, 'a') as f:
             f.write(image_path + '\t')
             json_object = json.dumps(data)
             f.write(json_object)
